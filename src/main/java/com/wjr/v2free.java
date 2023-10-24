@@ -3,11 +3,16 @@ package com.wjr;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+// import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
 
 public class v2free {
     public static void main(String[] args) throws Exception {
-        EdgeDriver driver = new EdgeDriver();
+        // EdgeDriver driver = new EdgeDriver();
+        WebDriver driver=new ChromeDriver();
         String userName = args[0];
         String passWord = args[1];
         System.out.println("userName=" + userName + "passWord="+passWord);
