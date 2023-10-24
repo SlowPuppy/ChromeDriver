@@ -30,12 +30,15 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - uses: actions/checkout@v2
-    - name: prepare ChromeDriver
+    - name: prepare ChromeDriver@Chrome
       run: |
           sudo curl -o /usr/bin/chromedriver https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip
           sudo unzip /usr/bin/chromedriver
           sudo chmod -R 777 /usr/bin/chromedriver
+          sudo curl -o /usr/bin/chrome-linux 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+          sudo dpkg -i /usr/bin/chrome-linux
+          sudo chmod -R 777 /usr/bin/chrome-linux
+
           
     - name: Working
       run: |
