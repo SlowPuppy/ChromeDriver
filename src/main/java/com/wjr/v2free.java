@@ -14,9 +14,14 @@ public class v2free {
         try {
             driver.navigate().to("https://w1.v2free.net/auth/login");
 
-            // WebElement element = driver.findElement(By.id("sb_form_q"));
-            // element.sendKeys("WebDriver");
-            // element.submit();
+            WebElement username = driver.findElement(By.id("email"));
+            username.sendKeys(userName);
+            WebElement password = driver.findElement(By.id("passwd"));
+            password.sendKeys(passWord);
+
+            WebElement loginButton = driver.findElement(By.id("login"));
+            loginButton.click();
+
 
             Thread.sleep(5000);
         } finally {
