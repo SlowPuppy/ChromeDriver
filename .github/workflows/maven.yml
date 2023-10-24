@@ -32,11 +32,9 @@ jobs:
 
     - name: Prepare chromedriver
       uses: nanasess/setup-chromedriver@v2
-      with:
-        chromedriver-version: '118.0.5993.70'
 
     - name: Working
       run: |
-          # sudo cp -p ./chromedriver /usr/bin/
-          # chmod -R 777 /usr/bin/chromedriver
+          sudo cp -p ./chromedriver /usr/bin/
+          chmod -R 777 /usr/bin/chromedriver
           mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="2357561424@qq.com 84767737a"
