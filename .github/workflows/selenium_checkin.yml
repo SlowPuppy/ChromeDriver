@@ -44,8 +44,8 @@ jobs:
 
     - name: 查看chrome和chromedriver所在位置
       run: |
-       where chrome
-       where chromedriver
+       find / -name 'Google Chrome'
+       find / -name chromedriver
       
     - name: Build with Maven
       run: mvn -B package --file pom.xml
