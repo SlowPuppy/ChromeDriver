@@ -42,7 +42,7 @@ public class v2free {
             confirmButton.click();
 
             WebElement flag = driver.findElement(By.className("disabled"));
-            if(flag!=null){
+            if(flag==null){
                 WebElement checkinButton = driver.findElement(By.id("checkin"));
                 checkinButton.click();
             }
