@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    
+    - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -42,7 +42,7 @@ jobs:
       run: 
         chromedriver --version
 
-    - name: 检查
+    - name: 二次检查
       uses: actions/checkout@v3
 
     - name: 查看文件目录
