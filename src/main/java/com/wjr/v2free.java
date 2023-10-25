@@ -41,9 +41,7 @@ public class v2free {
             WebElement confirmButton = driver.findElement(By.id("result_ok"));
             confirmButton.click();
             WebElement checkinButton = driver.findElement(By.id("checkin"));
-            if(checkinButton!=null){
-                checkinButton.click();
-            }
+            checkinButton.click();
 
             Thread.sleep(3000);
         } finally {
