@@ -36,10 +36,8 @@ jobs:
         chromedriver --version
         google-chrome --version
 
-      
-    # - name: Build with Maven
-    #   run: mvn -B package --file pom.xml
           
-    # - name: Working
-    #   run: |
-    #       mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
+    - name: Working
+      run: |
+          mvn compile
+          mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
