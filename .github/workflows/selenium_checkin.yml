@@ -31,14 +31,13 @@ jobs:
     - name: Prepare chromedriver
       uses: nanasess/setup-chromedriver@v2
 
-    - name: 设置chromedriver并输出版本
-      run: |
-        chromedriver --version
-        google-chrome --version
+    # - name: 设置chromedriver并输出版本
+    #   run: |
+    #     chromedriver --version
+    #     google-chrome --version
 
           
     - name: Working
       run: |
-          mvn compile
           mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="${{secrets.V2_USERNAME}} ${{secrets.V2_PASSWORD}}"
           mvn exec:java -Dexec.mainClass="com.wjr.hifini" -Dexec.args="${{secrets.HIFINI_USERNAME}} ${{secrets.HIFINI_PASSWORD}}"
