@@ -37,6 +37,9 @@ public class hifini {
 
             Thread.sleep(5000);
 
+            // WebElement flag=driver.findElement(By.id("sg_sign"));
+
+
             WebElement checkinButton = driver.findElement(By.id("sign"));
             checkinButton.click();
 
