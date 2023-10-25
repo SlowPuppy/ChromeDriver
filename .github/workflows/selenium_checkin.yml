@@ -11,8 +11,8 @@ name: selenium check in
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    - cron: '0 16 * * *'
 
 jobs:
   build:
@@ -41,3 +41,4 @@ jobs:
       run: |
           mvn compile
           mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="${{secrets.V2_USERNAME}} ${{secrets.V2_PASSWORD}}"
+          mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="${{secrets.HIFINI_USERNAME}} ${{secrets.HIFINI_PASSWORD}}"
