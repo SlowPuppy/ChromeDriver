@@ -40,6 +40,6 @@ jobs:
     #   uses: nanasess/setup-chromedriver@v2
 
           
-    # - name: Working
-    #   run: |
-    #       mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="2357561424@qq.com 84767737a"
+    - name: Working
+      run: |
+          mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
