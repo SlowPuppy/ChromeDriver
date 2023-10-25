@@ -27,8 +27,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
 
     - name: 下载chrome并输出版本
       run: | 
@@ -44,6 +42,8 @@ jobs:
       run: 
         chromedriver --version
 
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
           
     - name: Working
       run: |
