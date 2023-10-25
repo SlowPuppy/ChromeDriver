@@ -31,8 +31,8 @@ jobs:
     - name: Prepare chromedriver
       uses: nanasess/setup-chromedriver@v2
 
-    - name: 设置chromedriver并输出版本，再看看里面有没有google-chrome
-      run: 
+    - name: 设置chromedriver并输出版本
+      run: |
         chromedriver --version
         google-chrome --version
 
