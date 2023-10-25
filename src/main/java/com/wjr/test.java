@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class test {
     public static void main(String[] args) throws Exception {
-        // System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         WebDriver driver=new ChromeDriver();
         String userName = args[0];
         String passWord = args[1];
