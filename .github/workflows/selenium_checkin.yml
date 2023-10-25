@@ -36,7 +36,7 @@ jobs:
        google-chrome --version
     
     - name: 移动chromedriver
-      run: mv chromedriver.exe /usr/bin/chromedriver
+      run: sudo mv chromedriver.exe /usr/bin/chromedriver
     # - name: Prepare chromedriver
     #   uses: nanasess/setup-chromedriver@v2
 
