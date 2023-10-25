@@ -36,7 +36,9 @@ jobs:
        google-chrome --version
     
     - name: 移动chromedriver
-      run: sudo mv chromedriver /usr/bin/chromedriver
+      run: | 
+        sudo mv chromedriver /usr/bin/chromedriver
+        chromedriver --version
 
     - name: 设置chromedriver权限
       run: chmod +x /usr/bin/chromedriver
@@ -44,6 +46,6 @@ jobs:
     #   uses: nanasess/setup-chromedriver@v2
 
           
-    - name: Working
-      run: |
-          mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
+    # - name: Working
+    #   run: |
+    #       mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
