@@ -35,15 +35,13 @@ jobs:
        sudo apt install google-chrome-stable
        google-chrome --version
        
-    - name: 设置chromedriver权限
+    - name: 设置chromedriver并输出版本
       run: |
-        chown root:root /usr/bin/chromedriver
-        chmod +x /usr/bin/chromedriver 
-
-    - name: 移动chromedriver并输出版本
-      run: | 
-        sudo mv chromedriver /usr/bin/chromedriver
+        curl -LO https://chromedriver.storage.googleapis.com/latest/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip 
+        chmod +x chromedriver
         chromedriver --version
+
 
     # - name: Prepare chromedriver
     #   uses: nanasess/setup-chromedriver@v2
