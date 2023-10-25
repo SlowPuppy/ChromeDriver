@@ -41,10 +41,11 @@ public class v2free {
             WebElement confirmButton = driver.findElement(By.id("result_ok"));
             confirmButton.click();
 
-            WebElement flag = driver.findElement(By.className("disabled"));
-            if(flag==null){
+            try {
                 WebElement checkinButton = driver.findElement(By.id("checkin"));
                 checkinButton.click();
+            } catch (Exception e) {
+                // TODO: handle exception
             }
 
 
