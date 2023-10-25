@@ -28,19 +28,20 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: 下载chrome并输出版本
-      run: | 
-       sudo apt install google-chrome-stable
-       google-chrome --version
+    # - name: 下载chrome并输出版本
+    #   run: | 
+    #    sudo apt install google-chrome-stable
+    #    google-chrome --version
 
 
 
     - name: Prepare chromedriver
       uses: nanasess/setup-chromedriver@v2
 
-    - name: 设置chromedriver并输出版本
+    - name: 设置chromedriver并输出版本，再看看里面有没有google-chrome
       run: 
         chromedriver --version
+        google-chrome --version
 
     - name: 查看chrome和chromedriver所在位置
       run: |
