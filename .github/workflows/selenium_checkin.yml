@@ -45,6 +45,6 @@ jobs:
         chromedriver --version
 
           
-    # - name: Working
-    #   run: |
-    #       mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
+    - name: Working
+      run: |
+          mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
