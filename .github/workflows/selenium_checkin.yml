@@ -40,4 +40,4 @@ jobs:
     - name: Working
       run: |
           mvn compile
-          mvn exec:java -Dexec.mainClass="com.wjr.test" -Dexec.args="2357561424@qq.com 84767737a"
+          mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="2357561424@qq.com 84767737a"

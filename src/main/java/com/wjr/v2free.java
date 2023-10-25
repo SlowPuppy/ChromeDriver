@@ -21,7 +21,7 @@ public class v2free {
         chrome_options.addArguments("--disable-gpu") ;// 谷歌文档提到需要加上这个属性来规避bug
         chrome_options.addArguments("--headless") ;// 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver=new ChromeDriver(chrome_options);
         String userName = args[0];
         String passWord = args[1];
         System.out.println("userName=" + userName + "passWord="+passWord);
