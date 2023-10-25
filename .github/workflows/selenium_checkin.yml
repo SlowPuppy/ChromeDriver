@@ -36,7 +36,9 @@ jobs:
        google-chrome --version
        
     - name: 设置chromedriver权限
-      run: chmod +x /usr/bin/chromedriver 
+      run: |
+        chown root:root /usr/bin/chromedriver
+        chmod +x /usr/bin/chromedriver 
 
     - name: 移动chromedriver并输出版本
       run: | 
