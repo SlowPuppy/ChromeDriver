@@ -40,4 +40,5 @@ jobs:
     - name: Working
       run: |
           mvn exec:java -Dexec.mainClass="com.wjr.v2free" -Dexec.args="${{secrets.V2_USERNAME}} ${{secrets.V2_PASSWORD}}"
-          mvn exec:java -Dexec.mainClass="com.wjr.hifini" -Dexec.args="${{secrets.HIFINI_USERNAME}} ${{secrets.HIFINI_PASSWORD}}"
+          # hifini添加了机器人验证，以后再说
+          # mvn exec:java -Dexec.mainClass="com.wjr.hifini" -Dexec.args="${{secrets.HIFINI_USERNAME}} ${{secrets.HIFINI_PASSWORD}}"
